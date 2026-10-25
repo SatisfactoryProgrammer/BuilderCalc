@@ -25,11 +25,11 @@
         <div id="tapeRows" class="tape-grid"></div>
       </section>
       <div class="fraction-keys" aria-label="Add a fraction to the current number">
-        <button class="fraction-key" data-fraction="1/32">+¹⁄₃₂</button>
-        <button class="fraction-key" data-fraction="1/16">+¹⁄₁₆</button>
-        <button class="fraction-key" data-fraction="1/8">+⅛</button>
-        <button class="fraction-key" data-fraction="1/4">+¼</button>
-        <button class="fraction-key" data-fraction="1/2">+½</button>
+        <button class="fraction-key" data-fraction="1/32" aria-label="Add one thirty-second inch"><span>+</span><svg class="fraction-svg" viewBox="0 0 38 44" aria-hidden="true"><text x="19" y="17">1</text><path d="M4 22H34"/><text x="19" y="41">32</text></svg></button>
+        <button class="fraction-key" data-fraction="1/16" aria-label="Add one sixteenth inch"><span>+</span><svg class="fraction-svg" viewBox="0 0 38 44" aria-hidden="true"><text x="19" y="17">1</text><path d="M4 22H34"/><text x="19" y="41">16</text></svg></button>
+        <button class="fraction-key" data-fraction="1/8" aria-label="Add one eighth inch"><span>+</span><svg class="fraction-svg" viewBox="0 0 38 44" aria-hidden="true"><text x="19" y="17">1</text><path d="M4 22H34"/><text x="19" y="41">8</text></svg></button>
+        <button class="fraction-key" data-fraction="1/4" aria-label="Add one quarter inch"><span>+</span><svg class="fraction-svg" viewBox="0 0 38 44" aria-hidden="true"><text x="19" y="17">1</text><path d="M4 22H34"/><text x="19" y="41">4</text></svg></button>
+        <button class="fraction-key" data-fraction="1/2" aria-label="Add one half inch"><span>+</span><svg class="fraction-svg" viewBox="0 0 38 44" aria-hidden="true"><text x="19" y="17">1</text><path d="M4 22H34"/><text x="19" y="41">2</text></svg></button>
       </div>
       <div class="keypad" aria-label="Calculator keypad">
         <button class="key utility" data-key="clear">AC</button><button class="key utility" data-key="sign">±</button><button class="key utility" data-key="back">⌫</button><button class="key operator" data-op="÷">÷</button>
@@ -48,7 +48,7 @@
     <form method="dialog"><button class="close-button" aria-label="Close">×</button></form>
     <p class="eyebrow">QUICK GUIDE</p><h2>Enter a measurement</h2>
     <p>Use the number pad and operation buttons like a regular calculator. The fraction buttons add that amount to the number being entered: tap <code>2</code>, then <code>+⅛</code> to enter 2⅛.</p>
-    <p>The calculator shows the decimal value and all three nearest tape marks: ¼, ⅛, and ¹⁄₁₆ inch.</p>
+    <p>The calculator shows the decimal result and the closest ½, ¼, ⅛, ¹⁄₁₆, and ¹⁄₃₂ inch tape marks, with their error from the exact value.</p>
     <button id="gotIt" class="calculate-button">Got it</button>
   </dialog>
   <script src="app.js"></script>
