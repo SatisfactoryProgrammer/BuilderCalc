@@ -1,0 +1,10 @@
+{
+  "name": "Builder Calc — Fraction Inch Calculator",
+  "short_name": "Builder Calc",
+  "description": "Calculate with fractional inches and round to tape measure marks.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f5ef",
+  "theme_color": "#173b35",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

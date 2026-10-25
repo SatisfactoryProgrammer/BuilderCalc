@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#173b35">
+  <meta name="description" content="A simple fraction inch calculator for tape measure measurements.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Fraction Inch Calculator</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">⅛</div>
+      <div><p class="eyebrow">BUILDER CALC</p><h1>Inch calculator</h1></div>
+      <button class="help-button" id="helpButton" aria-label="Show help">?</button>
+    </header>
+
+    <section class="calculator card" aria-label="Fraction inch calculator">
+      <div class="display"><div id="expression" class="expression">Inches</div><div class="display-decimal"><span class="display-caption">DECIMAL INCHES</span><span><span id="displayValue" class="display-value">0</span><span class="display-unit">″</span></span></div></div>
+      <section class="tape-results" aria-label="Tape measure marks within one sixty-fourth of an inch" aria-live="polite">
+        <h2>USABLE TAPE MARKS <span>within ¹⁄₆₄″</span></h2>
+        <div id="tapeRows"></div>
+      </section>
+      <div class="fraction-keys" aria-label="Add a fraction to the current number">
+        <button class="fraction-key" data-fraction="1/32">+¹⁄₃₂</button>
+        <button class="fraction-key" data-fraction="1/16">+¹⁄₁₆</button>
+        <button class="fraction-key" data-fraction="1/8">+⅛</button>
+        <button class="fraction-key" data-fraction="1/4">+¼</button>
+        <button class="fraction-key" data-fraction="1/2">+½</button>
+      </div>
+      <div class="keypad" aria-label="Calculator keypad">
+        <button class="key utility" data-key="clear">AC</button><button class="key utility" data-key="sign">±</button><button class="key utility" data-key="back">⌫</button><button class="key operator" data-op="÷">÷</button>
+        <button class="key" data-digit="7">7</button><button class="key" data-digit="8">8</button><button class="key" data-digit="9">9</button><button class="key operator" data-op="×">×</button>
+        <button class="key" data-digit="4">4</button><button class="key" data-digit="5">5</button><button class="key" data-digit="6">6</button><button class="key operator" data-op="−">−</button>
+        <button class="key" data-digit="1">1</button><button class="key" data-digit="2">2</button><button class="key" data-digit="3">3</button><button class="key operator" data-op="+">+</button>
+        <button class="key zero" data-digit="0">0</button><button class="key" data-key="decimal">.</button><button class="key equals" data-key="equals">=</button>
+      </div>
+      <p id="error" class="error" role="alert" hidden></p>
+    </section>
+
+    <footer><span class="tape-icon" aria-hidden="true">▤</span> Made for the measurements you actually use.</footer>
+  </main>
+
+  <dialog id="helpDialog" class="help-dialog">
+    <form method="dialog"><button class="close-button" aria-label="Close">×</button></form>
+    <p class="eyebrow">QUICK GUIDE</p><h2>Enter a measurement</h2>
+    <p>Use the number pad and operation buttons like a regular calculator. The fraction buttons add that amount to the number being entered: tap <code>2</code>, then <code>+⅛</code> to enter 2⅛.</p>
+    <p>The calculator shows the decimal value and all three nearest tape marks: ¼, ⅛, and ¹⁄₁₆ inch.</p>
+    <button id="gotIt" class="calculate-button">Got it</button>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
